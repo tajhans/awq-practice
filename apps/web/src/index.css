@@ -1,1 +1,3 @@
 @import "@awq-practice/ui/globals.css";
+
+html { scrollbar-gutter: stable;}

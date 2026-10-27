@@ -14,11 +14,11 @@ export const Route = createRootRouteWithContext<RouterAppContext>()({
   head: () => ({
     meta: [
       {
-        title: "awq-practice",
+        title: "Academic World Quest Practice",
       },
       {
         name: "description",
-        content: "awq-practice is a web application",
+        content: "Practice problems devised from the 2027 AWQ study guide.",
       },
     ],
     links: [
@@ -36,7 +36,7 @@ function RootComponent() {
       <HeadContent />
       <ThemeProvider
         attribute="class"
-        defaultTheme="dark"
+        defaultTheme="system"
         disableTransitionOnChange
         storageKey="vite-ui-theme"
       >
