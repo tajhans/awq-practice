@@ -1,0 +1,38 @@
+{
+  "name": "awq-practice",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ],
+    "catalog": {
+      "zod": "^4.5.4",
+      "typescript": "^6.0.3",
+      "varlock": "1.23.0",
+      "next-themes": "^0.4.6",
+      "sonner": "^2.0.8",
+      "tailwindcss": "^4.3.3"
+    }
+  },
+  "type": "module",
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "check-types": "turbo run check-types",
+    "dev:web": "turbo run dev -F web --",
+    "env:generate": "varlock codegen --path ./apps/web/",
+    "postinstall": "varlock codegen --path ./apps/web/"
+  },
+  "dependencies": {
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@awq-practice/config": "workspace:*",
+    "@types/node": "^26.4.1",
+    "turbo": "^2.11.7",
+    "typescript": "catalog:",
+    "varlock": "catalog:"
+  },
+  "packageManager": "bun@1.4.0"
+}
